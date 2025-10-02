@@ -14,10 +14,9 @@ const server = http.createServer((req, res) => {
     req.on('end', () => {
       const { email, password } = JSON.parse(body);
 
-      // DEBT 1 (FIXME): Proper validation is missing.
-      if (!email || !password) {
+      if (!email || !email.includes('@') || !password || password.length < 8) {
         res.writeHead(400, { 'Content-Type': 'application/json' });
-        res.end(JSON.stringify({ error: 'Email and password are required.'}));
+        res.end(JSON.stringify({ error: 'Invalid email format or password too short (minimum 8 characters).' }));
         return;
       }
 
