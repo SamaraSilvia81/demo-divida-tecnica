@@ -1,0 +1,13 @@
+{
+  "name": "demo-client-server-debt",
+  "version": "1.0.0",
+  "description": "A simple client/server example in Node.js to demonstrate the impact of Technical Debt.",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start:server": "node server.js",
+    "start:client": "node client.js"
+  },
+   "author": "SamaraSilvia81 <samarasilvia.dev@gmail.com>",
+  "license": "ISC"
+}
