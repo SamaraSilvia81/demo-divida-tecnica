@@ -5,6 +5,14 @@
 
 Este é um mini-projeto em Node.js criado para demonstrar de forma prática o conceito de **Dívida Técnica Auto-Admitida (SATD)** em um cenário client/server.
 
+## Conceitos-Chave
+
+### Dívida Técnica (Technical Debt)
+É uma metáfora criada por Ward Cunningham que descreve a consequência de escolher uma solução de código fácil e rápida ("código viável") em vez de uma solução melhor que levaria mais tempo. Ao fazer isso, "contraímos uma dívida" que precisará ser paga no futuro com juros, na forma de maior custo de manutenção, mais bugs e menor velocidade para adicionar novas funcionalidades.
+
+### Dívida Técnica Auto-Admitida (SATD)
+É um subconjunto da Dívida Técnica que é **explicitamente documentado** pelo próprio desenvolvedor dentro do código-fonte. Geralmente, isso é feito através de comentários como `// TODO`, `// FIXME` ou `// XXX`. Este projeto foca na SATD porque ela é um indicador visível e mensurável da dívida em um sistema.
+
 ## A Ideia do Projeto
 
 O objetivo é simular uma API (`server.js`) que possui dívidas técnicas conhecidas e um cliente (`client.js`) que consome essa API. Através da interação entre eles, podemos observar o impacto real e os riscos de não "pagar" a dívida.
