@@ -3,6 +3,11 @@ const { readFileSync, writeFileSync } = require('fs');
 
 const DB_PATH = './appointments.json';
 
+function sendWelcomeEmail(email) {
+  console.log(`Sending welcome email to: ${email}`);
+  // Actual email sending logic would come here...
+}
+
 const server = http.createServer((req, res) => {
   if (req.method === 'POST' && req.url === '/users') {
     let body = '';
@@ -26,10 +31,10 @@ const server = http.createServer((req, res) => {
         appointments.push(newUser);
 
         writeFileSync(DB_PATH, JSON.stringify(appointments, null, 2)); 
-
         console.log(`User saved with email: ${email}`);
 
-        // DEBT 2 (TODO): Implement the welcome email sending.
+        sendWelcomeEmail(email);
+
         res.writeHead(201, { 'Content-Type': 'application/json' });
         res.end(JSON.stringify(newUser)); 
 
